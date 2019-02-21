@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:10px auto;"></div>
+
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>   
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var option = {
+			tooltip : {
+				trigger: 'axis',
+				textStyle:{color:'#ffffff'},
+				axisPointer: {
+					type: 'line',
+					lineStyle: {
+						width: 1,
+						color:'rgba(255,255,255,0.1)'
+					}
+				}
+			},
+			xAxis:  {
+				type: 'value',
+				min:0,
+				max:5,
+				axisLine:{show:false},
+				axisTick:{show:false},
+				axisLabel:{
+					textStyle:{
+						color:'#ffffff'
+					}
+				},
+				splitLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,0.2)',
+						width:1,
+						type:'solid'
+					}
+				}
+			},
+			yAxis: {
+				type: 'category',
+				data: ['微信','电子报','微博','社区','公众号','新闻'],
+				axisLine:{show:false},
+				splitLine:{show:false},
+				axisTick:{show:false},
+				axisLabel:{
+					textStyle:{
+						color:'#ffffff'
+					}
+				}
+			},
+			barWidth:20,
+			series: [
+				{
+					name: '预警排行榜',
+					type: 'bar',
+					itemStyle:{
+						normal:{
+							color:'#f93b47'
+						}
+					},
+					data: [1.3,2.6,3.2,3.5,4.1,4.7]
+				}
+			]
+		};
+
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

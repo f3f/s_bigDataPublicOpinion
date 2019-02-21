@@ -1,0 +1,72 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>   
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var option = {
+			title: {
+				text: ''
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			radar: {
+				center:['50%','60%'],
+				splitArea: {show: false},
+				splitNumber:4,
+				splitLine: { lineStyle: { color:'#525a69' } },
+				axisLine: { lineStyle: { color: '#525a69' } },
+				name: { textStyle: { color: '#ffffff',fontSize:16 } },
+				indicator: [
+					{ name: '正面', max: 4,
+						axisLabel:{
+							show:true,
+							textStyle:{color:'#a2a5aa',fontSize:12},
+							formatter:'{value}'
+						}
+					},
+					{ name: '中立', max: 4},
+					{ name: '负面', max: 4}
+				]
+			},
+			series: [{
+				type: 'radar',
+				data : [
+					{
+						value : [2.7,2.7,2.7],
+						name : '属性对比雷达图',
+						symbolSize:0,
+						tooltip: {
+							trigger: 'item'
+						},
+						itemStyle:{
+							normal:{
+								color:'#113d7d'
+							}
+						},
+						areaStyle:{
+							normal:{
+								color:'#113d7d'
+							}
+						}
+					}
+				]
+			}]
+		};
+
+         
+        //使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

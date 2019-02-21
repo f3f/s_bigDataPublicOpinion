@@ -1,0 +1,64 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:360px;width:100%; margin:10px auto;"></div>
+<!-- ECharts单文件引入 -->
+<script src="js/echarts-all-3.js"></script>
+<script>
+	// 基于准备好的dom，初始化echarts图表
+	var myChart = echarts.init(document.getElementById('main'));
+
+	var option = {
+		title : {
+			text: ''
+		},
+		tooltip : {
+			trigger: 'item',
+			formatter: "{a} <br/>{b} : {c} ({d}%)"
+		},
+		legend: {
+			show:false,
+			x : 'center',
+			y : 'bottom',
+			data:['新华网','百灵网','海外网','网易新闻','百度论坛','荆楚网','西楚网','新浪微博']
+		},
+		calculable : true,
+		color:['#b30000','#c380ee','#6d55e5','#7993f2','#2cbebc','#f6cb58','#ff7800','#d92020'],
+		label: {
+			normal:{
+				textStyle:{
+					fontSize:14
+				}
+			}
+		},
+		series : [
+			{
+				name:'',
+				type:'pie',
+				radius : [20, 130],
+				center : ['50%', '50%'],
+				roseType : 'area',
+				data:[
+					{value:10, name:'新华网'},
+					{value:5, name:'百灵网'},
+					{value:15, name:'海外网'},
+					{value:25, name:'网易新闻'},
+					{value:20, name:'百度论坛'},
+					{value:35, name:'荆楚网'},
+					{value:30, name:'西楚网'},
+					{value:40, name:'新浪微博'}
+				]
+			}
+		]
+	};
+
+	//使Echarts图表自适应响应窗口变化
+	window.onresize = myChart.resize;
+	// 为echarts对象加载数据
+	myChart.setOption(option);
+</script>
+</body>

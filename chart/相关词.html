@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:500px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+	<script src="js/echarts-all.js"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var itemStyle = { normal: {color:'#ff2a5c'} };
+		var itemStyle2 = { normal: {color:'#1c7dfa'} };
+		var itemStyle3 = { normal: {color:'#afe5fe'} };
+
+		var option = {
+			title : {
+				text: ''
+			},
+			tooltip : {
+				trigger: 'item'
+			},
+			series : [
+				{
+					type:'force',
+					name : "相关词",
+					itemStyle: {
+						normal: {
+							label: {
+								show: true,
+								textStyle: {
+									color: '#000'
+								}
+							},
+							nodeStyle : {
+								borderWidth : 0
+							},
+							linkStyle: {
+								type: 'curve'
+							}
+						}
+					},
+					minRadius : 20,
+					maxRadius : 40,
+					scaling: 1.5,
+					linkSymbol: 'arrow',
+					roam: 'move',
+					nodes:[
+						{category:0, name: '五联疫苗事件', value : 15,itemStyle: itemStyle},
+						{category:1, name: '疫苗',value : 10,itemStyle: itemStyle2},
+						{category:2, name: '相关',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '开展',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '调查组',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '接种',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '五联',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '卫生',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '调查',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '服务中心',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '预防',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '调包',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '联合',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '注射器',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '规范',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '记者',value : 8,itemStyle: itemStyle3},
+						{category:2, name: '计生委',value : 8,itemStyle: itemStyle3}
+
+					],
+					links : [
+						{source : '五联疫苗事件', target : '疫苗'},
+						{source : '疫苗', target : '相关'},
+						{source : '疫苗', target : '开展'},
+						{source : '疫苗', target : '调查组'},
+						{source : '疫苗', target : '接种'},
+						{source : '疫苗', target : '五联'},
+						{source : '疫苗', target : '卫生'},
+						{source : '疫苗', target : '调查'},
+						{source : '疫苗', target : '服务中心'},
+						{source : '疫苗', target : '预防'},
+						{source : '疫苗', target : '调包'},
+						{source : '疫苗', target : '注射器'},
+						{source : '疫苗', target : '规范'},
+						{source : '疫苗', target : '记者'},
+						{source : '疫苗', target : '联合'},
+						{source : '疫苗', target : '计生委'}
+					]
+				}
+			]
+		};
+
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

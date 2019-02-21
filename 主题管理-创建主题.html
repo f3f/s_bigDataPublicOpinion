@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content=" 大数据舆情系统">
+        <meta name="keywords" content=" 大数据舆情系统">
+        <title> 大数据舆情系统</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    	<!-- header -->
+		<header class="header bg-line">
+            <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+            <p class="fr">
+                <span class="fl">
+                    <a href="javascript:;">用户名</a><span>|</span>
+                    <a href="个人中心.html">个人中心</a><span>|</span>
+                    <a href="login.html">退出登陆</a>
+                </span>
+                <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+            </p>
+        </header>
+    <article class="article">
+        <!-- menu -->
+        <div class="menu">
+        	<ul class="mainmenu">
+                <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+                <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+                <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+                <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+                <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+                <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+                <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+                <li><a href="主题列表.html" class="active"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+            </ul>
+        </div>
+        <!-- content -->
+        <div class="content pt80">
+            <div class="col-box clearfix">
+                <div class="col col-box1">
+                    <h3><span>设置监测主题</span></h3>
+                    <div class="chart">
+                        <span class="setName">设置主题名称：</span><input type="text" class="setNameinput mt15 mb15">
+                    </div>
+                </div>
+                <div class="col col-box1">
+                    <h3><span>设置监测关键词<i>(每个主题最多可设置10组关键词，每组关键词字数建议6个字以内)</i></span></h3>
+                    <div class="chart chart20">
+                        <input type="text" class="setNameinput mt15 mb15"><a href="javascript:;" class="addKeyWord"><i class="icon1 icon1-addKW"></i>添加关键词</a>
+                        <div class="themeKeywords">
+                        	<span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                            <span>删除的关键词<i class="icon1 icon1-shift"></i></span>
+                            <span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                            <span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                        </div>
+                	</div>              
+                </div>
+                <div class="col col-box1">
+                    <h3><span>设置排除词<i>(每个主题最多可设置10组关键词，每组排除词字数建议6个字以内)</i></span></h3>
+                    <div class="chart chart20">
+                        <input type="text" class="setNameinput mt15 mb15"><a href="javascript:;" class="addKeyWord"><i class="icon1 icon1-addKW"></i>添加关键词</a>
+                        <div class="themeKeywords">
+                        	<span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                            <span>添加的排除词<i class="icon1 icon1-shift"></i></span>
+                            <span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                            <span>添加的关键词<i class="icon1 icon1-shift"></i></span>
+                        </div>
+                	</div> 
+                </div>
+
+                <div class="colbtn-div">
+                    <button type="button" class="complete-btn f16">完成</button>
+                    <a href="javascript:;" class="cancel-a f16 ml20">取消</a>
+                </div>
+            </div>
+        </div>
+    </article>
+        <footer class="footer">
+            <div class="bg-line">
+                
+                <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <span id="scrollToTop" class="off-screen"></span>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

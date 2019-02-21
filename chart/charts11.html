@@ -1,0 +1,129 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+	<script src="js/echarts-all-3.js"></script>
+	<script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var placeHolderStyle = {
+			normal : {
+				color: 'rgba(0,0,0,0)',
+				label: {show:false},
+				labelLine: {show:false}
+			},
+			emphasis : {
+				color: 'rgba(0,0,0,0)'
+			}
+		};
+		option = {
+			title: {
+				text: ''
+			},
+			tooltip : {
+				trigger: 'axis'
+			},
+			legend: {
+				orient : 'vertical',
+				x : '52%',
+				y : '13%',
+				data:['新闻','微博','社区'],
+				textStyle:{color:'#fff'}
+			},
+			series : [
+				{
+					name:'新闻',
+					type:'pie',
+					clockWise:false,
+					radius : [125, 150],
+					hoverAnimation:false,
+					itemStyle:{
+						normal:{
+							color:'#0085f5',
+							label: {show: false}
+						}
+					},
+					data:[
+						{
+							value:42,
+							name:'新闻',
+							tooltip: {
+								trigger: 'item'
+							}
+						},
+						{
+							value:58,
+							name:'invisible',
+							itemStyle : placeHolderStyle
+						}
+					]
+				},
+				{
+					name:'微博',
+					type:'pie',
+					clockWise:false,
+					radius : [100, 125],
+					hoverAnimation:false,
+					itemStyle:{
+						normal:{
+							color:'#afe5fe',
+							label: {show: false}
+						}
+					},
+					data:[
+						{
+							value:26,
+							name:'微博',
+							tooltip: {
+								trigger: 'item'
+							}
+						},
+						{
+							value:74,
+							name:'invisible',
+							itemStyle : placeHolderStyle
+						}
+					]
+				},
+				{
+					name:'社区',
+					type:'pie',
+					clockWise:false,
+					radius : [75, 100],
+					hoverAnimation:false,
+					itemStyle:{
+						normal:{
+							color:'#f82a5b',
+							label: {show: false}
+						}
+					},
+					data:[
+						{
+							value:22,
+							name:'社区',
+							tooltip: {
+								trigger: 'item'
+							}
+						},
+						{
+							value:78,
+							name:'invisible',
+							itemStyle : placeHolderStyle
+						}
+					]
+				}
+			]
+		};
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

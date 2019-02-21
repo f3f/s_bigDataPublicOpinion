@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content=" 大数据舆情系统">
+        <meta name="keywords" content=" 大数据舆情系统">
+        <title> 大数据舆情系统</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <!-- header -->
+    <header class="header bg-line">
+        <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+        <p class="fr">
+            <span class="fl">
+                <a href="javascript:;">用户名</a><span>|</span>
+                <a href="个人中心.html">个人中心</a><span>|</span>
+                <a href="login.html">退出登陆</a>
+            </span>
+            <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+        </p>
+    </header>
+    <!-- article -->
+    <article class="article">
+        <!-- menu -->
+        <div class="menu">
+        	<ul class="mainmenu">
+                <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+                <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+                <li><a href="舆情分析.html" class="active"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+                <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+                <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+                <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+                <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+                <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+            </ul>
+        </div>
+        <ul class="submenu sub-dynamic">
+            <li><a href="舆情分析.html" class="active">媒体类型</a></li>
+            <li><a href="舆情分析-媒体覆盖.html">媒体覆盖</a></li>
+            <li><a href="舆情分析-属性对比.html">属性对比</a></li>
+        </ul>
+        <!-- content -->        
+        <div class="content pt60">
+            <div class="seafixed pl270">
+                <div class="searchbar">
+                    <form>
+                        <div class="b-div clearfix">
+                            <div class="pr fl zi10">
+                                <p class="fl clickSelect"><span class="select w85-tal">主题名称</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                                <ul class="select-box" style="display: none;left:0;">
+                                    <li class="active">主题名称</li>
+                                    <li>主题名称</li>
+                                    <li>主题名称主题</li>
+                                    <li>主题名称</li>
+                                    <li>主题名称名</li>
+                                    <li>主题名称名称</li>
+                                </ul>
+                            </div>
+                            <div class="fl spanlist">
+                                <i class="icon icon-l" id="keyprev"></i>
+                                <div class="keywords">
+                                    <div class="keys" style="position:relative;">
+                                        <span class="active">关键词</span>
+                                        <span>关键词关键词</span>
+                                        <span>关键</span>
+                                        <span>关键词</span>
+                                        <span>关键词</span>
+                                        <span>关键词</span>
+                                    </div>
+                                </div>
+                                <i class="icon icon-r" id="keynext"></i>
+                            </div>
+                        </div>
+                        <div class="b-div clearfix">
+                            <div class="pr fl">
+                                <p class="fl clickSelect">属性：<span class="select">全部</span> <i class="icon icon-b"></i></p>
+                                <ul class="select-box" style="display: none;">
+                                    <li class="active">全部</li>
+                                    <li>平媒</li>
+                                    <li>新闻</li>
+                                    <li>论坛</li>
+                                    <li>博客</li>
+                                    <li>微信</li>
+                                </ul>
+                            </div>
+                            <p class="fl radio">
+                                <span><input type="radio" name="radio" checked/> 24小时</span>
+                                <span><input type="radio" name="radio"/> 一周</span>
+                                <span><input type="radio" name="radio"/> 一个月</span>
+                                    <span><input type="radio" name="radio"/> 自定义：
+                                        <input type="text" readonly class="dateinput" placeholder="开始:2016/03/08" id="startDate"/>&nbsp;&nbsp;
+                                        <input type="text" readonly class="dateinput" placeholder="结束:2016/04/08" id="endDate"/>
+                                    </span>
+                                <button type="button" class="fl search-btn">搜索</button>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-box clearfix mt175">
+                <div class="col col-box1">
+                    <h3><span>媒体对比走势</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts06.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>媒体量化分析</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts07.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>属性量化分析</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts08.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailslist">
+                <table class="listtable">
+                    <caption class="f16">详细信息</caption>
+                    <thead>
+                        <tr> <th>日期</th> <th>新闻</th> <th>公众号</th> <th>社区</th> <th>微博</th> <th>电子报</th> <th>微信</th> <th>总计</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg">
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg">
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr class="bg">
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="bg-line">
+            
+            <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+        </div>
+    </footer>
+    <!-- 返回顶部 -->
+    <span id="scrollToTop" class="off-screen"></span>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            $('.content').css({'margin-left':'270px'});
+
+            /*下拉菜单*/
+            $('.clickSelect').click(function(){
+                $(this).next().slideToggle("slow");
+                $(this).find('i').removeClass("icon-b");
+                $(this).find('i').addClass("icon-t");
+            })
+            $(".select-box li").click(function(){
+                var textval = $(this).text();
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                $(this).parent().prev().find('.select').text(textval);
+                $(".select-box").hide();
+                $(this).parent().prev().find('i').removeClass("icon-t");
+                $(this).parent().prev().find('i').addClass("icon-b");
+            });
+
+        });
+    </script>
+    </body>
+</html>

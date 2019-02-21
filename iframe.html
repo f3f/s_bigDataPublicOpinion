@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content=" 大数据舆情系统">
+        <meta name="keywords" content=" 大数据舆情系统">
+        <title>首页_ 大数据舆情系统</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    	<!-- header -->
+		<header class="header bg-line">
+            <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+            <p class="fr">
+                <span class="fl">
+                    <a href="javascript:;">用户名</a><span>|</span>
+                    <a href="个人中心.html">个人中心</a><span>|</span>
+                    <a href="login.html">退出登陆</a>
+                </span>
+                <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+            </p>
+        </header>
+    <article>
+        <!-- menu -->
+        <div class="menu">
+        	<ul class="mainmenu">
+                <li><a href="index.html" class="active"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+                <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+                <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+                <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+                <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+                <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+            </ul>
+        </div>
+        <!-- content -->        
+        <div class="content">
+            <div class="searchbar">
+                <form>
+                    <div class="b-div clearfix">
+                        <div class="pr fl zi10">
+                            <p class="fl clickSelect"><span class="select w85-tal">主题名称</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                            <ul class="select-box" style="display: none;left: 0;">
+                                <li class="active">主题名称</li>
+                                <li>主题名称</li>
+                                <li>主题名称主题</li>
+                                <li>主题名称</li>
+                                <li>主题名称名</li>
+                                <li>主题名称名称</li>
+                            </ul>
+                        </div>
+                        <div class="fl spanlist">
+                            <i class="icon icon-l" id="keyprev"></i>
+                            <div class="keywords">
+                                <div class="keys" style="position:relative;">
+                                    <span class="active">关键词</span>
+                                    <span>关键词关键词</span>
+                                    <span>关键</span>
+                                    <span>关键词</span>
+                                    <span>关键词</span>
+                                    <span>关键词</span>
+                                </div>
+                            </div>
+                            <i class="icon icon-r" id="keynext"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-box clearfix">
+                <div class="col col-box2">
+                    <h3><span>舆情走势图</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/线条折线.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>媒体覆盖</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/线条折线.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box1">
+                    <h3><span>正负面对比</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/线条折线.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>最新舆情</span></h3>
+                    <div class="chart">
+                        <table class="list">
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-qing">中立</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-green">正面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-green">正面</i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>负面舆情</span></h3>
+                    <div class="chart">
+                        <table class="list">
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col col-box1">
+                    <h3><span>微博走势</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/线条折线.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>热词排行</span></h3>
+                    <div class="hotnav">
+                        <span class="fl"><i class="icon icon-l3"></i></span>
+                        <ul class="fl">
+                            <li class="active"><a href="javascript:;">领导动态</a></li>
+                            <li><a href="javascript:;">省级单位</a></li>
+                            <li><a href="javascript:;">地域舆情</a></li>
+                            <li><a href="javascript:;">重点关注</a></li>
+                        </ul>
+                        <span class="fr"><i class="icon icon-r3"></i></span>
+                    </div>
+                    <div class="chart">
+                        <table class="list">
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-red">负面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-qing">中立</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-green">正面</i></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                    <p>来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50</p>
+                                </td>
+                                <td class="itd"><i class="i-green">正面</i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>热词分析</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/线条折线.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+        <footer class="footer">
+            <div class="bg-line">
+                
+                <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+            </div>
+        </footer>
+        <!-- 返回顶部 -->
+        <span id="scrollToTop" class="off-screen"></span>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $(function(){
+
+                /*下拉菜单*/
+                $('.clickSelect').click(function(){
+                    $(this).next().slideToggle("slow");
+                    $(this).find('i').removeClass("icon-b");
+                    $(this).find('i').addClass("icon-t");
+                })
+                $(".select-box li").click(function(){
+                    var textval = $(this).text();
+                    $(this).siblings().removeClass("active");
+                    $(this).addClass("active");
+                    $(this).parent().prev().find('.select').text(textval);
+                    $(".select-box").hide();
+                    $(this).parent().prev().find('i').removeClass("icon-t");
+                    $(this).parent().prev().find('i').addClass("icon-b");
+                });
+
+            });
+        </script>
+    </body>
+</html>

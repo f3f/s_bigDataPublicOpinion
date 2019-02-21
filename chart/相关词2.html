@@ -1,0 +1,82 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:500px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+	<script src="js/echarts-all.js"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+
+		var option = {
+			title : {
+				text: ''
+			},
+			tooltip : {
+				trigger: 'item'
+			},
+			series : [
+				{
+					type:'force',
+					name : "相关词",
+					itemStyle: {
+						normal: {
+							label: {
+								show: true,
+								textStyle: {
+									color: '#fff'
+								}
+							},
+							nodeStyle : {
+								borderWidth : 0
+							}
+						}
+					},
+					minRadius : 20,
+					maxRadius : 60,
+					scaling: 1.5,
+					roam: 'move',
+					symbol:'rectangle',
+					symbolSize:['60','20'],
+					nodes:[
+						{name: '赵薇', value : 20 },
+						{name: '赵薇穿日本国旗装',value : 10 },
+						{name: '万维网',value : 6 },
+						{name: '逼死网友',value : 8 },
+						{name: '陈坤删帖',value : 11 },
+						{name: '赵薇国籍',value : 5 },
+						{name: '赵薇马云关系',value : 8 },
+						{name: '赵薇司机打人',value : 14 },
+						{name: '乐水',value : 9 },
+						{name: '戴立忍',value : 6 },
+						{name: '新闻网站秒删帖',value : 10 }
+
+					],
+					links : [
+						{source : '赵薇', target : '赵薇穿日本国旗装'},
+						{source : '赵薇', target : '万维网'},
+						{source : '赵薇', target : '逼死网友'},
+						{source : '赵薇', target : '陈坤删帖'},
+						{source : '赵薇', target : '赵薇国籍'},
+						{source : '赵薇', target : '赵薇马云关系'},
+						{source : '赵薇', target : '赵薇司机打人'},
+						{source : '赵薇', target : '乐水'},
+						{source : '赵薇', target : '戴立忍'},
+						{source : '赵薇', target : '新闻网站秒删帖'}
+					]
+				}
+			]
+		};
+
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

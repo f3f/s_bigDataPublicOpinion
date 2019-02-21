@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content=" 大数据舆情系统">
+    <meta name="keywords" content=" 大数据舆情系统">
+    <title> 大数据舆情系统</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- header -->
+<header class="header bg-line">
+    <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+    <p class="fr">
+        <span class="fl">
+            <a href="javascript:;">用户名</a><span>|</span>
+            <a href="个人中心.html">个人中心</a><span>|</span>
+            <a href="login.html">退出登陆</a>
+        </span>
+        <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+    </p>
+</header>
+<article class="article">
+<!-- menu -->
+<div class="menu">
+    <ul class="mainmenu">
+        <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+        <li><a href="舆情动态.html" class="active"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+        <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+        <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+        <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+        <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+        <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+        <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+    </ul>
+</div>
+<ul class="submenu sub-dynamic">
+    <li><a href="javascript:;" class="active">全部舆情</a></li>
+    <li><a href="javascript:;">微博</a></li>
+    <li><a href="javascript:;">电子报</a></li>
+    <li><a href="javascript:;">新闻</a></li>
+    <li><a href="javascript:;">社区</a></li>
+    <li><a href="javascript:;">博客</a></li>
+    <li><a href="javascript:;">公众号</a></li>
+</ul>
+<!-- content -->
+    <div class="content pt60">
+        <div class="seafixed pl270">
+        <div class="searchbar minw1100">
+            <form>
+                <div class="b-div clearfix">
+                    <div class="pr fl zi10 sel-box">
+                        <p class="fl clickSelect">主题名称：<span class="select w85-tal">主题名称</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                        <ul class="select-box" style="display: none;">
+                            <li class="active">主题名称</li>
+                            <li>主题名称</li>
+                            <li>主题名称主题</li>
+                            <li>主题名称</li>
+                            <li>主题名称名</li>
+                            <li>主题名称名称</li>
+                        </ul>
+                    </div>
+                    <div class="fl spanlist">
+                        <i class="icon icon-l" id="keyprev"></i>
+                        <div class="keywords">
+                            <div class="keys" style="position:relative;">
+                                <span class="active">关键词</span>
+                                <span>关键词关键词</span>
+                                <span>关键</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                            </div>
+                        </div>
+                        <i class="icon icon-r" id="keynext"></i>
+                    </div>
+                </div>
+                <div class="b-div clearfix">
+                    <div class="pr fl zi9 sel-box">
+                        <p class="fl clickSelect">情感类型：<span class="select w85-tal">全部</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                        <ul class="select-box" style="display: none;">
+                            <li class="active">全部</li>
+                            <li>平媒</li>
+                            <li>新闻</li>
+                            <li>论坛</li>
+                            <li>博客</li>
+                            <li>微信</li>
+                        </ul>
+                    </div>
+                    <p class="fl radio">
+                        <span><input type="radio" name="radio" checked/> 24小时</span>
+                        <span><input type="radio" name="radio"/> 一周</span>
+                        <span><input type="radio" name="radio"/> 一个月</span>
+                                    <span><input type="radio" name="radio"/> 自定义：
+                                        <input type="text" readonly class="dateinput" placeholder="开始:2016/03/08" id="startDate"/>&nbsp;&nbsp;
+                                        <input type="text" readonly class="dateinput" placeholder="结束:2016/04/08" id="endDate"/>
+                                    </span>
+                        <button type="button" class="fl search-btn">搜索</button>
+                    </p>
+                </div>
+                <div class="clickSelect clearfix">
+                    <span class="sortTit">文章排序：</span>
+                    <ul class="sortUl fl">
+                        <li class="active"><span>相关度</span></li>
+                        <li><span>浏览数</span><i class="icon icon-asc"></i></li>
+                        <li><span>转载量</span><i class="icon icon-asc"></i></li>
+                        <li><span>发布时间</span><i class="icon icon-asc"></i></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="tablelist mt190">
+            <table>
+                <thead class="chkfixed pl270">
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>
+                            全选 <button type="button" class="batch-btn f16">批量收藏</button>
+                            <div style="position:absolute;right:10px;top:20px;">
+                                <div class="pr fr zi5 sel-box">
+                                    <p class="fl clickSelect chart-sel"><i class="select w85-tal">选择导出条数</i>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                                    <ul class="select-box" style="display: none;left:0;">
+                                        <li class="active">全部</li>
+                                        <li>500</li>
+                                        <li>1000</li>
+                                        <li>5000</li>
+                                        <li>10000</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" height="60">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" class="ckbox" checked="checked"/><div class="delTr"></div></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" id="detailsid1" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div class="pr zzfbox" style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i><i class="icon icon-bzf"></i>
+                                    </span>
+                                    <ul class="selectType" style="display:none;">
+                                        <li class='i-green'>正面</li>
+                                        <li class='i-qing'>中性</li>
+                                        <li class="i-red">负面</li>
+                                    </ul>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" id="similarArticle1">相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" id="sendAlarmBtn1"><i class="icon icon-collect"></i></a>
+                            <a href="javascript:;" class="fr delBtn"><i class="icon icon-del"></i></a>
+                            <div class="delTr"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" class="ckbox" checked="checked"/><div class="delTr"></div></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" id="detailsid2" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div class="pr zzfbox" style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i><i class="icon icon-bzf"></i>
+                                    </span>
+                                    <ul class="selectType" style="display:none;">
+                                        <li class='i-green'>正面</li>
+                                        <li class='i-qing'>中性</li>
+                                        <li class="i-red">负面</li>
+                                    </ul>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" id="similarArticle2">相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" id="sendAlarmBtn2"><i class="icon icon-collect"></i></a>
+                            <a href="javascript:;" class="fr delBtn"><i class="icon icon-del"></i></a>
+                            <div class="delTr"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                        <td>
+                            <h4>
+                                <a href="javascript:checkDetails(this);" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                <div style="display:inline-block;">
+                                    <span class="emotionalType">
+                                        <i class='i-green'>正面</i>
+                                    </span>
+                                    <span class="selectType" style="display:none">
+                                        <i class='i-green'>正面</i>
+                                        <i class='i-qing'>中性</i>
+                                        <i class="i-red">负面</i>
+                                    </span>
+                                </div>
+                                <a href="舆情动态-相似文章.html" class="fr color-blue" >相似文章数 <span class="color-yellow">(12)</span></a>
+                            </h4>
+                            <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                转载量：1231&nbsp; &nbsp; &nbsp;
+                                浏览数：2345
+                            </p>
+                            <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                            <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                            <a href="javascript:;" class="fr" ><i class="icon icon-collect"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>全选 <button type="button" class="batch-btn f16">批量收藏</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul class="paging">
+                                <li class="fl prev"><i class="icon icon-l2"></i>上一页</li>
+                                <li class="num active">1</li> <li class="num">2</li> <li class="num">3</li> <li class="num">4</li> <li class="num">5</li>
+                                <li class="num">6</li> <li class="num">7</li> <li class="num">8</li> <li class="num">9</li> <li class="num">...18</li>
+                                <li class="fl next">下一页<i class="icon icon-r2"></i></li>
+                                <li class="fl"><input type="text" placeholder="1"/></li>
+                                <li class="fl"><span>共 688 条记录／18页</span></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+</div>
+</article>
+<footer class="footer">
+    <div class="bg-line">
+        
+        <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+    </div>
+</footer>
+
+<!-- 弹出框-查看相似文章 -->
+<div class="popUp-div aimilarArticle" id="aimilarArticleDiv" style="display:none;z-index:8;">
+    <div class="dialog-details-div">
+        <div class="details">
+            <a href="javascript:;" class="close-btn" id="aAcloseBtn"><i class="icon icon-close"></i></a>
+            <div style="height:40px;text-align:center;font-size:16px;">相似文章</div>
+            <div class="detailData" style="min-height:800px;margin:0 20px;">
+                <div class="tablelist">
+                    <table>
+                        <thead class="chkfixed" style="position:inherit;">
+                        <tr>
+                            <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                            <td>
+                                <h4>
+                                    <a href="javascript:;" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a>
+                                    <i class="i-red">负面</i>
+                                </h4>
+                                <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                    2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                    <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                    转载量：1231&nbsp; &nbsp; &nbsp;
+                                    浏览数：2345
+                                </p>
+                                <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                            <td>
+                                <h4><a href="javascript:;" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a> <i class="i-red">负面</i></h4>
+                                <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                    2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                    <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                    转载量：1231&nbsp; &nbsp; &nbsp;
+                                    浏览数：2345
+                                </p>
+                                <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                            <td>
+                                <h4><a href="javascript:;" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a> <i class="i-red">负面</i></h4>
+                                <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                    2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                    <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                    转载量：1231&nbsp; &nbsp; &nbsp;
+                                    浏览数：2345
+                                </p>
+                                <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                            <td>
+                                <h4><a href="javascript:;" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a> <i class="i-red">负面</i></h4>
+                                <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                    2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                    <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                    转载量：1231&nbsp; &nbsp; &nbsp;
+                                    浏览数：2345
+                                </p>
+                                <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" width="50"><input type="checkbox" name="chk" checked/></td>
+                            <td>
+                                <h4><a href="javascript:;" class="color-white">陕西省<span class="span-red">政府</span>第五次常务会议召开 分析经济形势</a> <i class="i-red">负面</i></h4>
+                                <p>新浪微博&nbsp; &nbsp; &nbsp;
+                                    2016/4/8   8:50&nbsp; &nbsp; &nbsp;
+                                    <a href="javascript:;">原文链接</a>&nbsp; &nbsp; &nbsp;
+                                    转载量：1231&nbsp; &nbsp; &nbsp;
+                                    浏览数：2345
+                                </p>
+                                <p>文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，文章摘要拟通过定增募集资金不超过19.7798亿元，第一大客户恒大地产控股的恒大人寿拟认购6.4998亿元……</p>
+                                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <ul class="paging">
+                                    <li class="fl prev"><i class="icon icon-l2"></i>上一页</li>
+                                    <li class="num active">1</li> <li class="num">2</li> <li class="num">3</li> <li class="num">4</li> <li class="num">5</li><li class="num">...18</li>
+                                    <li class="fl next">下一页<i class="icon icon-r2"></i></li>
+                                    <li class="fl"><input type="text" placeholder="1"/></li>
+                                    <li class="fl"><span>共 688 条记录／18页</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框-设置排除词 -->
+<div class="popUp-div" id="detailsDiv" style="display:none;">
+    <div class="dialog-details-div">
+        <div class="details">
+            <a href="javascript:;" class="close-btn" id="closeBtn"><i class="icon icon-close"></i></a>
+            <h2>陕西省政府第五次常务会议召开 分析经济形势</h2>
+            <p class="sourcetime">来源：中国新闻网&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/4/8   8:50
+                <i class="i-red">负面</i>
+                <a href="javascript:;" class="fr"><i class="icon icon-share"></i></a>
+                <a href="javascript:;" class="fr"><i class="icon icon-collect"></i></a>
+            </p>
+            <div class="detailsLeft">
+                <ul>
+                    <li>首发网站：</li>
+                    <li>关键词：<span>陕西政府</span></li>
+                    <li>类型：</li>
+                    <li>行业：</li>
+                    <li>地域：</li>
+                    <li>首发时间：</li>
+                    <li>阅读数：</li>
+                    <li>点赞数：</li>
+                </ul>
+            </div>
+            <div class="detailData" style="float:left;margin-left:220px;max-height: 580px;">
+            <p>4月11日上午，陕西省委副书记、代省长胡和平主持召开省政府第五次常务会议，分析一季度经济形势，安排部署下一阶段工作。</p>
+            <p>分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。
+                分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。
+                分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。
+                分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。分析一季度经济形势，安排部署下一阶段工作。
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 返回顶部 -->
+<span id="scrollToTop" class="off-screen"></span>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="js/main.js"></script>
+<script>
+
+    $('.content').css({'margin-left':'270px'});
+
+    $(document).bind("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".sel-box").length == 0){
+            $(".select-box").hide();
+            $('.clickSelect').find('i').addClass("icon-b");
+            $('.clickSelect').find('i').removeClass("icon-t");
+        }
+        if(target.closest(".zzfbox").length == 0){
+            $(".selectType").hide();
+            $('.emotionalType').find('.icon').addClass("icon-b");
+            $('.emotionalType').find('.icon').removeClass("icon-t");
+        }
+    });
+    /*下拉菜单*/
+    $('.clickSelect').click(function(){
+        $(".select-box").hide();
+        $('.clickSelect').find('i').addClass("icon-b");
+        $('.clickSelect').find('i').removeClass("icon-t");
+        $(this).next().slideToggle("slow");
+        $(this).find('i').removeClass("icon-b");
+        $(this).find('i').addClass("icon-t");
+    });
+    $(".select-box li").click(function(){
+        var textval = $(this).text();
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        $(this).parent().prev().find('.select').text(textval);
+        $(".select-box").hide();
+        $(this).parent().prev().find('i').removeClass("icon-t");
+        $(this).parent().prev().find('i').addClass("icon-b");
+    });
+
+    function checkDetails(id){
+        $('#detailsDiv').slideToggle("slow");
+    }
+
+    //设置排除词-完成
+    $('#closeBtn').click(function(){
+        $('#detailsDiv').slideToggle("slow");
+    });
+
+    $('#aAcloseBtn').click(function(){
+        $('#aimilarArticleDiv').slideToggle("slow");
+    });
+
+    function searchAimilarArticle(id){
+        //alert($("#"+id));
+        $("#aimilarArticleDiv").slideToggle("slow");
+    }
+
+    $('.emotionalType').click(function(){
+        $(".selectType").hide();
+        $('.emotionalType').find('.icon').addClass("icon-b");
+        $('.emotionalType').find('.icon').removeClass("icon-t");
+        $(this).next().show();
+        $(this).find('.icon').removeClass("icon-b");
+        $(this).find('.icon').addClass("icon-t");
+    });
+    $('.selectType li').click(function(){
+
+        var textval = $(this).text();
+        if(textval=='正面'){
+            $(this).parent().prev().html("<i class='i-green'>正面</i><i class='icon icon-b'></i>");
+        }else if(textval=='负面'){
+            $(this).parent().prev().html("<i class='i-red'>负面</i><i class='icon icon-b'></i>");
+        }else{
+            $(this).parent().prev().html("<i class='i-qing'>中性</i><i class='icon icon-b'></i>");
+        }
+        $(".selectType").hide();
+        $(this).parent().prev().find('.icon').removeClass("icon-t");
+        $(this).parent().prev().find('.icon').addClass("icon-b");
+    });
+
+    $('.delBtn').click(function(){
+        $(this).parent().parent().addClass('removeTr');
+        $(this).parent().parent().find('.delTr').show();
+        $(this).parent().parent().find('.ckbox').removeAttr("checked");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content=" 大数据舆情系统">
+        <meta name="keywords" content=" 大数据舆情系统">
+        <title> 大数据舆情系统</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <!-- header -->
+    <header class="header bg-line">
+        <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+        <p class="fr">
+            <span class="fl">
+                <a href="javascript:;">用户名</a><span>|</span>
+                <a href="个人中心.html">个人中心</a><span>|</span>
+                <a href="login.html">退出登陆</a>
+            </span>
+            <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+        </p>
+    </header>
+    <!-- article -->
+    <article class="article">
+        <!-- menu -->
+        <div class="menu">
+            <ul class="mainmenu">
+                <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+                <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+                <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+                <li><a href="舆情预警-概况.html" class="active"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+                <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+                <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+                <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+                <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+            </ul>
+        </div>
+        <ul class="submenu sub-dynamic">
+            <li><a href="舆情预警-概况.html" class="active">预警概况</a></li>
+            <li><a href="舆情预警-列表.html">预警列表</a></li>
+            <li><a href="舆情预警-日志.html">预警日志</a></li>
+        </ul>
+        <!-- content -->
+        <div class="content pt60">
+            <div class="col-box clearfix pt20">
+                <div class="col col-box1">
+                    <h3><span>预警走势</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts15.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>预警排行榜</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts16.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col col-box2">
+                    <h3><span>预警级别分布图</span></h3>
+                    <div class="chart-div">
+                        <iframe src="chart/charts17.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="detailslist">
+                <table class="listtable">
+                    <caption class="f16">详细信息</caption>
+                    <thead>
+                        <tr> <th>日期</th> <th>短信预警</th> <th>邮件预警</th> <th>IM预警</th> <th>预警总计</th> <th>预警级别</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg">
+                            <td>2016/04/08</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><i class="cgyj-i"></i><span class="color-blue">常规预警</span></td>
+                        </tr>
+                        <tr>
+                            <td>2016/04/07</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><i class="zyyj-i"></i><span class="color-qing">重要预警</span></td>
+                        </tr>
+                        <tr class="bg">
+                            <td>2016/04/06</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><i class="fczy-i"></i><span class="color-pink">非常重要预警</span></td>
+                        </tr>
+                        <tr>
+                            <td>2016/04/05</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><i class="cgyj-i"></i><span class="color-blue">常规预警</span></td>
+                        </tr>
+                        <tr class="bg">
+                            <td>2016/04/04</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><i class="cgyj-i"></i><span class="color-blue">常规预警</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </article>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="bg-line">
+            
+            <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+        </div>
+    </footer>
+    <!-- 返回顶部 -->
+    <span id="scrollToTop" class="off-screen"></span>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            $('.content').css({'margin-left':'270px'});
+
+            /*下拉菜单*/
+            $('.clickSelect').click(function(){
+                $(this).next().slideToggle("slow");
+                $(this).find('i').removeClass("icon-b");
+                $(this).find('i').addClass("icon-t");
+            })
+            $(".select-box li").click(function(){
+                var textval = $(this).text();
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                $(this).parent().prev().find('.select').text(textval);
+                $(".select-box").hide();
+                $(this).parent().prev().find('i').removeClass("icon-t");
+                $(this).parent().prev().find('i').addClass("icon-b");
+            });
+
+            $('#startDate').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:  'zh-CN',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+            $('#endDate').datetimepicker({
+                format: 'yyyy-mm-dd',
+                language:  'zh-CN',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+        });
+    </script>
+    </body>
+</html>

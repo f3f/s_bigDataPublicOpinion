@@ -1,0 +1,100 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:10px auto;"></div>
+
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>   
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var option = {
+			title: {
+				text: '30天微博总量走势',
+				right:20,
+				textStyle:{fontSize:14,color:'#ffffff'}
+			},
+			tooltip: {
+				trigger: 'axis',
+				textStyle:{color:'#ffffff'},
+				axisPointer: {
+					type: 'line',
+					lineStyle: {
+						width: 1,
+						color:'rgba(255,255,255,0.1)'
+					}
+				}
+			},
+			grid: {
+				left: '1%',
+				right: '1%',
+				bottom: '4%',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'category',
+					axisLine:{show:false},
+					splitLine:{show:false},
+					axisLabel:{
+						interval: 2,
+						textStyle:{
+							color:'#ffffff'
+						}
+					},
+					axisTick:{
+						lineStyle:{
+							color:'#fff'
+						}
+					},
+					data : ['02-01','02-02','02-03','02-04','02-05','02-06','02-07','02-08','02-09','02-10','02-11','02-12','02-13','02-14','02-15','02-16','02-17','02-18','02-19','02-20','02-21','02-22','02-23','02-24','02-25','02-26','02-27','02-28','02-29']
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+					max:750,
+					min:0,
+					interval:250,
+					axisLine:{show:false},
+					axisLabel:{
+						textStyle:{
+							color:'#ffffff'
+						}
+					},
+					splitLine:{
+						lineStyle:{
+							color:'rgba(255,255,255,0.2)',
+							width:1,
+							type:'solid'
+						}
+					}
+				}
+			],
+			series : [
+				{
+					name:'正面',
+					type:'bar',
+					data:[111, 212, 313, 414, 515, 616, 717, 618, 519, 410, 311, 212, 113, 214, 315, 416, 517, 618, 719, 620, 521, 422, 323, 224, 125, 226, 327, 428, 529],
+					itemStyle:{
+						normal:{
+							width:5,
+							color:'#1c7dfa'
+						}
+					}
+				}
+			]
+		};
+
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

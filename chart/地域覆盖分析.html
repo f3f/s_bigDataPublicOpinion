@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>
+	<script src="js/china.js"></script>
+	<script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		function randomData() {
+			return Math.round(Math.random()*1000);
+		}
+
+		option = {
+			tooltip: {
+				trigger: 'item'
+			},
+			visualMap: {
+				min: 1200,
+				max: 30,
+				left: 'left',
+				top: 'bottom',
+				calculable: true,
+				color:['#8ec0f4', '#165bb2']
+			},
+			series: [
+				{
+					name: 'name',
+					type: 'map',
+					mapType: 'china',
+					roam: false,
+					data:[
+						{name: '北京',value: randomData() },
+						{name: '天津',value: randomData() },
+						{name: '上海',value: randomData() },
+						{name: '重庆',value: randomData() },
+						{name: '河北',value: randomData() },
+						{name: '河南',value: randomData() },
+						{name: '云南',value: randomData() },
+						{name: '辽宁',value: randomData() },
+						{name: '黑龙江',value: randomData() },
+						{name: '湖南',value: randomData() },
+						{name: '安徽',value: randomData() },
+						{name: '山东',value: randomData() },
+						{name: '新疆',value: randomData() },
+						{name: '江苏',value: randomData() },
+						{name: '浙江',value: randomData() },
+						{name: '江西',value: randomData() },
+						{name: '湖北',value: randomData() },
+						{name: '广西',value: randomData() },
+						{name: '甘肃',value: randomData() },
+						{name: '山西',value: randomData() },
+						{name: '内蒙古',value: randomData() },
+						{name: '陕西',value: randomData() },
+						{name: '吉林',value: randomData() },
+						{name: '福建',value: randomData() },
+						{name: '贵州',value: randomData() },
+						{name: '广东',value: randomData() },
+						{name: '青海',value: randomData() },
+						{name: '西藏',value: randomData() },
+						{name: '四川',value: randomData() },
+						{name: '宁夏',value: randomData() },
+						{name: '海南',value: randomData() },
+						{name: '台湾',value: randomData() },
+						{name: '香港',value: randomData() },
+						{name: '澳门',value: randomData() }
+					]
+				}
+			]
+		};
+
+         
+        //使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

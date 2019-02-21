@@ -1,0 +1,115 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all.js"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main')); 
+        
+		var option = {
+			title : {
+				text: ''
+			},
+			series : [
+				{
+					name:'树图',
+					type:'tree',
+					orient: 'horizontal',  // vertical horizontal
+					rootLocation: {x: 10,y: 170}, // 根节点位置  {x: 100, y: 'center'}
+					nodePadding: 20,
+					layerPadding: 350,
+					roam: true,
+					symbolSize: 6,
+					itemStyle: {
+						normal: {
+							color: '#1b7bf6',
+							label: {
+								show: true,
+								position: 'right',
+								formatter: "{b}",
+								textStyle: {
+									color: 'rgba(255,255,255,0.8)'
+								}
+							}
+						}
+					},
+
+					data: [
+						{
+							"name":"高考首日内蒙古 四名考生有违规 情节，成绩拟被 取消",
+							"children":[{
+								"name":"新华网",
+								"children":[
+									{"name":"中国经济网",
+										"children":[
+											{"name":"东北网"}
+										]
+									},
+									{"name":"新浪网"},
+									{"name":"中国新闻网",
+										"children":[
+											{"name":"中国青年网",
+												"children":[
+													{"name":"中国江苏网"},
+													{"name":"东方视野"},
+													{"name":"武进新闻网"},
+													{"name":"东方网"},
+													{"name":"中华网"},
+													{"name":"中国西藏网"}
+												]
+											},
+											{"name":"大众网"},
+											{"name":"中国网江苏"},
+											{"name":"中国网河南"},
+											{"name":"重庆视界"},
+											{"name":"中国日报网",
+												"children":[
+													{"name":"大河网"},
+													{"name":"海外网"},
+													{"name":"环球网"}
+												]
+											}
+										]
+									},
+									{"name":"贵阳网"},
+									{"name":"中国青年网",
+										"children":[
+											{"name":"中国江苏网"},
+											{"name":"东方视野"},
+											{"name":"武进新闻网"},
+											{"name":"东方网",
+												"children":[
+													{"name":"新浪网"},
+													{"name":"中国网江苏"}
+												]
+											},
+											{"name":"中华网",
+												"children":[
+													{"name":"今日头条"}
+												]
+											},
+											{"name":"中国西藏网"}
+										]
+									},
+									{"name":"中国新闻网辽宁"}
+								]
+							}]
+						}
+					]
+				}
+			]
+		};
+
+         
+        //使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

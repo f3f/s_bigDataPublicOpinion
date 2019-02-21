@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="首页_ 大数据舆情系统">
+    <meta name="keywords" content="首页_ 大数据舆情系统">
+    <title>首页_ 大数据舆情系统</title>
+    <link rel="stylesheet" href="css/main.css" media="screen">
+    <link rel="stylesheet" href="css/homepage.css" media="screen">
+    <link rel="stylesheet" href="css/jquery.fullPage.css" >
+<style>
+
+</style>
+</head>
+<body>
+<div class="slide-box">
+    <ul id="slide">
+        <li id="#slide1"><a href="#box1"></a><i class="clk"></i></li>
+        <li id="#slide2"><a href="#box2"></a><i></i></li>
+        <li id="#slide3"><a href="#box3"></a><i></i></li>
+        <li id="#slide4"><a href="#box4"></a><i></i></li>
+        <li id="#slide5"><a href="#box5"></a><i></i></li>
+        <li id="#slide6"><a href="#box6"></a><i></i></li>
+        <li id="#slide7"><a href="#box7"></a><i></i></li>
+    </ul>
+</div>
+<div class="home-header">
+    <div class="clearfix head-con">
+        <div class="clearfix fl">
+            <a href="javascript:;"><i class="homeicon icon-logo fl"></i><span class="hometitle fl">大数据舆情监测平台</span></a>
+        </div>
+        <div class="clearfix fr iconbox pr">
+            <a href="javascript:openLoginBox();" ><i class="homeicon icon-user fl"></i><span class="fl">登录</span></a>
+            <div class="pa loginBox" style="display:none;">
+                <h5>会员登录</h5>
+                <div class="inputbox"><i class="homeicon icon-u"></i><input type="text" placeholder="用户名"></div>
+                <div class="inputbox"><i class="homeicon icon-p"></i><input type="password" placeholder="密码"></div>
+                <div class="valibox"><input type="text" placeholder="验证码"> <img src="images/validation2.png"/> <span>换一张</span></div>
+                <a href="index.html" class="loginBtn">登录</a>
+            </div>
+            <a href="申请试用.html"><i class="homeicon icon-trial fl"></i><span class="fl">申请试用</span></a>
+            <a href="javascript:;"><i class="homeicon icon-contact fl"></i><span class="fl">联系我们</span></a>
+        </div>
+    </div>
+</div>
+<div id="fullpage"><!-- 2560*1440    640*1001 -->
+    <div class="section box1" data-menuanchor="box1" id="box_1" >
+        <div class="clearfix contents">
+            <div class="fl titlebox">
+                <img src="images/homeimg1.png"/>
+            </div>
+            <div class="fr navbox">
+                <a href="#box2" class="a1">全网监测</a>
+                <a href="#box3" class="a2">实时热词</a>
+                <a href="#box4" class="a3">团队优势</a>
+                <a href="#box5" class="a4">核心技术</a>
+                <a href="#box6" class="a5">平台特点</a>
+                <a href="#box7" class="a6">产品案例</a>
+            </div>
+        </div>
+    </div>
+    <div class="section box2" data-menuanchor="box2" id="box_2" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">全网监测</h4>
+            </div>
+            <div class="bottombox">
+                <div class="fl echarbox">
+                    <iframe src="chart/全网监测柱状图.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                </div>
+                <div class="fr navbox">
+                    <div class="numbox">
+                        <h3>全网入库信息总量（万）</h3>
+                        <p><span>123456</span></p>
+                    </div>
+                    <div class="numbox">
+                        <h3>今日入库信息总量（万）</h3>
+                        <p><span>52871</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section box3" data-menuanchor="box3" id="box_3" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">实时热词 智能采集</h4>
+            </div>
+            <div class="hotWords">
+                <iframe src="chart/热词云.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="section box4" data-menuanchor="box4" id="box_4" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">团队优势</h4>
+            </div>
+            <div class="clearfix advantage" >
+                <div class="fl merititem" >
+                    <div class="img"><img src="images/homeimg2.png"/></div>
+                    <h4 class="title2">数据采集</h4>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                </div>
+                <div class="fl line"></div>
+                <div class="fl merititem">
+                    <div class="img"><img src="images/homeimg4.png"/></div>
+                    <h4 class="title2">分析技术</h4>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                </div>
+                <div class="fl line"></div>
+                <div class="fl merititem">
+                    <div class="img"><img src="images/homeimg3.png"/></div>
+                    <h4 class="title2">文本挖掘技术</h4>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                    <p>强大的语义分析技术，拥有丰富的经验积累。自主研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section box5" data-menuanchor="box5" id="box_5" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">平台特点</h4>
+                <span>从智能采集到多维分析，企业可通过 舆情监测系统平台量化评估企业等传播效果，及时发现处理潜在危机，调整新闻发布内容和品牌传播策略等。</span>
+            </div>
+            <div class="featuresbox">
+                <div class="outerRing"></div>
+                <div class="innerRing"></div>
+                <div class="centerRing"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section box6" data-menuanchor="box6" id="box_6" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">团队优势</h4>
+            </div>
+            <div class="clearfix advantagebox">
+                <div class="fl item">
+                    <div class="img"><i class="iconimg1"></i></div>
+                    <h4 class="navtitle">经验</h4>
+                    <p>多年运营和服务与各真服、企业经验； 大量行业数据支持；完整舆情监测理 论体系，专业、科学的舆情工作机制</p>
+                </div>
+                <div class="fl item">
+                    <div class="img"><i class="iconimg2"></i></div>
+                    <h4 class="navtitle">系统</h4>
+                    <p>多年运营和服务与各真服、企业经验； 大量行业数据支持；完整舆情监测理 论体系，专业、科学的舆情工作机制</p>
+                </div>
+                <div class="fl item">
+                    <div class="img"><i class="iconimg3"></i></div>
+                    <h4 class="navtitle">技术</h4>
+                    <p>多年运营和服务与各真服、企业经验； 大量行业数据支持；完整舆情监测理 论体系，专业、科学的舆情工作机制</p>
+                </div>
+                <div class="fl item">
+                    <div class="img"><i class="iconimg4"></i></div>
+                    <h4 class="navtitle">服务</h4>
+                    <p>多年运营和服务与各真服、企业经验； 大量行业数据支持；完整舆情监测理 论体系，专业、科学的舆情工作机制</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="section box7" data-menuanchor="box7" id="box_7" >-->
+        <!--<div class="clearfix contents">-->
+            <!--<div class="title">-->
+                <!--<h4 class="fl">产品案例</h4>-->
+            <!--</div>-->
+            <!--<div class="bottombox">-->
+                <!--<div class="fl leftbox">-->
+                    <!--<iframe src="chart/charts09.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>-->
+                <!--</div>-->
+                <!--<div class="fr rightbox">-->
+                    <!--<i class="homeicon icon-leftangle"></i>-->
+                    <!--<i class="homeicon icon-bottomangle"></i>-->
+                    <!--<p>专有的企业传播统计数据，提供媒体行业、地域及影响力排行等独家数据，帮助企业的量化评估传播效果。</p><br/>-->
+                    <!--<p>标准化、多维度、数字化、可视化的数据分析平台，方便生成、导出各类数据及图表。支持多品牌、事件的比较分析。</p><br/>-->
+                    <!--<p>舆论维度分析项有：<br/>关注度、影响力、正负面、媒体分布量</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    
+    <div class="section box7" data-menuanchor="box7" id="box_7" >
+        <div class="clearfix contents">
+            <div class="title">
+                <h4 class="fl">合作伙伴</h4>
+            </div>
+            <div class="bottombox partnersDiv">
+                <div class="partnersBox">
+                    <img src="images/partners/yangshi.jpg"/>
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/imc_logo.jpg"/>
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/renminribao.jpg"/>
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/tengxun.jpg" />
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/wangxinban.jpg"/>
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/xinanzhengquan.jpg" />
+                </div>
+                <div class="partnersBox">
+                    <img src="images/partners/chachakan.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-1.11.3.min.js" ></script>
+<script src="js/jquery.fullPage.js"></script>
+<script>
+
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //Navigation
+            menu: true,
+            anchors:['box1', 'box2', 'box3','box4','box5','box6','box7'],
+            navigation: false,
+            navigationPosition: 'right',
+            navigationTooltips: ['box1', 'box2', 'box3','box4','box5','box6','box7'],
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+
+            //Scrolling
+            css3: true,
+            scrollingSpeed: 500,
+            autoScrolling: true,
+            scrollBar: false,
+            easing: 'easeInQuart',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            touchSensitivity: 15,
+            normalScrollElementTouchThreshold: 5,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            resize : true,
+            fixedElements: '#header, .footer',
+            responsive: 0,
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            //events
+            afterLoad: function(anchorLink, index){
+                //using anchorLink
+                $("#slide").find('i').removeClass('clk');
+                $("#slide").find("i").eq(index-1).addClass('clk');
+            }
+        });
+    });
+
+    $(document).bind("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".iconbox").length == 0){
+            $(".loginBox").hide();
+        }
+    });
+
+    function openLoginBox(){
+        $('.loginBox').slideToggle('slow');
+    }
+</script>
+</html>

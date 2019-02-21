@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content=" 大数据舆情系统">
+    <meta name="keywords" content=" 大数据舆情系统">
+    <title> 大数据舆情系统</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- header -->
+<header class="header bg-line">
+    <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+    <p class="fr">
+        <span class="fl">
+            <a href="javascript:;">用户名</a><span>|</span>
+            <a href="个人中心.html">个人中心</a><span>|</span>
+            <a href="login.html">退出登陆</a>
+        </span>
+        <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+    </p>
+</header>
+<article class="article">
+    <!-- menu -->
+    <div class="menu">
+        <ul class="mainmenu">
+            <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+            <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+            <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+            <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+            <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+            <li><a href="事件分析.html" class="active"><i class="icon icon-event"></i><br/>事件分析</a></li>
+            <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+            <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content pt80">
+        <div class="col-box clearfix">
+            <div class="createThem">
+                <button type="button" class="batch-btn f16" id="createEvent">创建事件</button>
+            </div>
+            <div class="themTable">
+                <div class="allchkBox">
+                    <input type="checkbox" name="chk" class="fl" /> 全选
+                    <a href="javascript:;" class="downBtn">下载</a>
+                    <a href="javascript:;" class="delBtna">删除</a>
+                </div>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th width="20"></th>
+                        <th>事件名称</th>
+                        <th>生成时间</th>
+                        <th>状态</th>
+                        <th width="300">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="chk"/></td>
+                            <td>五联疫苗</td>
+                            <td>2016-05-26 16:19</td>
+                            <td><span class="span-green">完成</span></td>
+                            <td>
+                                    <span>
+                                        <a href="事件分析-已生成的事件报告-查看.html" target="_blank"><i class="icon icon-look"></i></a>
+                                        <a href="#"><i class="icon icon-refresh"></i></a>
+                                        <a href="#"><i class="icon icon-del"></i></a>
+                                        <a href="#" class="pr">
+                                            <i class="icon icon-download downloadbtn"></i>
+                                            <ul class="download-ul" style="display:none;">
+                                                <li>下载Word</li>
+                                                <li>下载PDF</li>
+                                            </ul>
+                                        </a>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chk"/></td>
+                            <td>五联疫苗</td>
+                            <td>2016-05-26 16:19</td>
+                            <td><span class="span-red">未完成</span></td>
+                            <td>
+                                    <span>
+                                        <a href="事件分析-已生成的事件报告-查看.html" target="_blank"><i class="icon icon-look"></i></a>
+                                        <a href="#"><i class="icon icon-refresh"></i></a>
+                                        <a href="#"><i class="icon icon-del"></i></a>
+                                        <a href="#" class="pr">
+                                            <i class="icon icon-download downloadbtn"></i>
+                                            <ul class="download-ul" style="display:none;">
+                                                <li>下载Word</li>
+                                                <li>下载PDF</li>
+                                            </ul>
+                                        </a>
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chk"/></td>
+                            <td>五联疫苗</td>
+                            <td>2016-05-26 16:19</td>
+                            <td><span class="span-blue">生成中</span>&nbsp;&nbsp;<span class="progressBar"><i>50%</i></span></td>
+                            <td>
+                                    <span>
+                                        <a href="事件分析-已生成的事件报告-查看.html" target="_blank"><i class="icon icon-look"></i></a>
+                                        <a href="#"><i class="icon icon-refresh"></i></a>
+                                        <a href="#"><i class="icon icon-del"></i></a>
+                                        <a href="#" class="pr">
+                                            <i class="icon icon-download downloadbtn"></i>
+                                            <ul class="download-ul" style="display:none;">
+                                                <li>下载Word</li>
+                                                <li>下载PDF</li>
+                                            </ul>
+                                        </a>
+                                    </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cluesTr" style="display:none">
+                    <p>对不起，您当前还没有生成任何事件分析哦！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<footer class="footer">
+    <div class="bg-line">
+        
+        <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+    </div>
+</footer>
+
+<!-- 弹出框-创建事件 -->
+<div class="popUp-div createEventBox" id="createEventDiv" style="display:none;">
+    <div class="dialog-div">
+        <h2 class="title f16 lh45">创建事件</h2>
+        <div class="con">
+            <table width="100%">
+                <tr>
+                    <td class="setName pt10" valign="top">事件名称：</td>
+                    <td colspan="2">
+                        <input type="text" class="setInput" placeholder="请输入事件名称">
+                        <p class=" mb15">（事件名称文字个数小于10个）</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="setName pt10" valign="top">事件关键词：</td>
+                    <td colspan="2">
+                        <input type="text" class="setInput" placeholder="请输入事件关键词">
+                        <p class=" mb15">（事件关键词文字个数小于10个）</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="setName pt10" valign="top">事件修饰词：</td>
+                    <td colspan="2">
+                        <input type="text" class="setInput" placeholder="请输入事件修饰词">
+                        <p class=" mb15">（作用：修饰监测关键词，如：#######）</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="setName pt10" valign="top">事件排除词：</td>
+                    <td colspan="2">
+                        <input type="text" class="setInput" placeholder="事件排除词">
+                        <p class=" mb15">（事件排除词文字个数小于10个）</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="setName pt10" valign="top">事件分析时间：</td>
+                    <td colspan="2">
+                        <input type="text" readonly class="dateinput" placeholder="开始:2016/03/08" id="startDate"/>&nbsp;至&nbsp;
+                        <input type="text" readonly class="dateinput" placeholder="结束:2016/04/08" id="endDate"/>
+                    </td>
+                </tr>
+            </table>
+            <div class="colbtn-div mt30 tc">
+                <a href="javascript:;" class="cancel-a f16 ml20 mr20" id="cancel-a">取消</a>
+                <button type="button" class="complete-btn f16">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 返回顶部 -->
+<span id="scrollToTop" class="off-screen"></span>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="js/main.js"></script>
+<script>
+    $('.content').css({'margin-left':'140px'});
+
+    $('.progressBar').each(function(i){
+        var width = $(this).find('i').text();
+        $(this).find('i').css({'width':width});
+    });
+
+
+    $(document).bind("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".downloadbtn").length == 0){
+            $('.downloadbtn').next().hide();
+        }
+    });
+    $('.downloadbtn').each(function(i){
+        $(this).click(function(){
+            $('.downloadbtn').next().hide();
+            $(this).next().show();
+        });
+    });
+
+    //创建事件
+    $('#createEvent').click(function(){
+        $('#createEventDiv').slideToggle("slow");
+    });
+    //创建事件-取消
+    $('#cancel-a').click(function(){
+        $('#createEventDiv').slideToggle("slow");
+    });
+
+    //没有事件数据时 隐藏全选行 显示无数据提示
+    var leg = $('.themTable tbody tr').length;
+    if(leg==0){
+        $('.allchkBox').hide();
+        $('.cluesTr').show();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script language="javascript" type="text/javascript">
+        function addRow() {
+            var newTR = document.getElementById("testTable").insertRow(document.getElementById("testTable").rows.length);
+            var newNameTD = newTR.insertCell(0);
+            newNameTD.innerHTML = "aa";
+            var newNameTD = newTR.insertCell(1);
+            newNameTD.innerHTML = "bb";
+            var newNameTD = newTR.insertCell(2);
+            newNameTD.innerHTML = "cc";
+            var newNameTD = newTR.insertCell(3);
+            newNameTD.innerHTML = "dd";
+        }
+        function insertRow() {
+            var oTable = document.getElementById("table_info");
+            var oTr = oTable.insertRow();
+            var oTd = oTr.insertCell(0);
+            oTd.innerHTML = "aa";
+            var oTd = oTr.insertCell(1);
+            oTd.innerHTML = "bb";
+        }
+        function insertRow2() {
+            //获取table对象
+            var table = document.getElementById("table_info2");
+            //找到要添加button的td，这里以表格第一行第一列为例子
+            var oTd = table.rows[0].cells[0];
+            //添加button到td中，添加前吧td内容清空并赋予button的代码
+            oTd.innerHTML = "<button onclick='insertRow22()'>添加收费</button>";
+        }
+        function insertRow22() {
+            var oTable = document.getElementById("table_info2");
+            var oTr = oTable.insertRow();
+            var oTd = oTr.insertCell();
+            oTd.innerHTML = "新添加了一行";
+        }
+        function insertRow3() {
+            //获取table对象
+            var table = document.getElementById("table_info3");
+            //找到要添加button的td，这里以表格第一行第一列为例子
+            var oTd2 = table.rows[0].insertCell();
+            oTd2.innerHTML = "&nbps;";
+        }
+        function tableDiv() {
+            var maxRow = 4;
+            var maxCol = 8;
+            var strTbody = ["<table border='1'><tbody>"];
+            for (var i = 0; i < maxRow; i++) {
+                strTbody.push("<tr>");
+                for (var j = 0; j < maxCol; j++) {
+                    strTbody.push("<td>test</td>");
+                }
+                strTbody.push("</tr>");
+            }
+            strTbody.push("</tbody></table>");
+            var obj = document.getElementById("tableDiv");
+            obj.innerHTML = strTbody.join("");
+        }
+        function init() {
+            var _table, _tbody, tr, td, text, maxRow, maxCol;
+            var docBody = document.body;
+            var _doc = document;
+            maxRow = 5;
+            maxCol = 8;
+            _table = _doc.createElement("table");
+            _table.border = "1";
+            _table.style.tableLayout = "fixed";
+            _tbody = _doc.createElement("tbody");
+            _table.insertBefore(_tbody, null);
+            docBody.insertBefore(_table, null);
+            for (var i = 0; i < maxRow; i++) {
+                tr = _doc.createElement("tr");
+                _tbody.insertBefore(tr, null);
+                for (var j = 0; j < maxCol; j++) {
+                    td = _doc.createElement("td");
+                    text = _doc.createTextNode("Text");
+                    td.insertBefore(text, null);
+                    tr.insertBefore(td, null);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <table id="testTable" border='1' cellspacing="1">
+        <tr>
+            <th> FirstName </th>
+            <th> LastName </th>
+            <th> BirthDay </th>
+            <th> age </th>
+        </tr>
+        <tr>
+            <td> Jim </td>
+            <td> Green </td>
+            <td> L.A </td>
+            <td> 23 </td>
+        </tr>
+        <tr>
+            <td> Andrew </td>
+            <td> Hou </td>
+            <td> Xi'an </td>
+            <td> 25 </td>
+        </tr>
+    </table>
+    <input type="button" id="aaa" value="+add new Row" onclick="addRow();" />
+</div>
+<br />
+<hr />
+<br />
+<div>
+    <input type="button" value="按钮添加行" onclick="insertRow();" />
+    <table id="table_info" border="1">
+        <tr>
+            <th> Name </th>
+            <th> Age </th>
+        </tr>
+    </table>
+</div>
+<br />
+<hr />
+<br />
+<div>
+    <input type="button" value="按钮中添加行" onclick="insertRow2();" />
+    <table id="table_info2" border="1">
+        <tr>
+            <th> Name </th>
+            <th> Age </th>
+        </tr>
+    </table>
+</div>
+<br />
+<hr />
+<br />
+<div>
+    <input type="button" value="连续添加行" onclick="insertRow3();" />
+    <table id="table_info3" border="1">
+        <tr>
+            <th> Name </th>
+            <th> Age </th>
+        </tr>
+    </table>
+</div>
+<br />
+<hr />
+<br />
+<div>
+    <input type="button" value="添加一个table" onclick="tableDiv();" />
+    <div id="tableDiv" ></div>
+</div>
+<br />
+<hr />
+<br />
+<div>
+    <input type="button" value="连续添加table" onclick="init();" />
+</div>
+</body>
+</html>

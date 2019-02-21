@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content=" 大数据舆情系统">
+    <meta name="keywords" content=" 大数据舆情系统">
+    <title> 大数据舆情系统</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- header -->
+<header class="header bg-line">
+    <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+    <p class="fr">
+        <span class="fl">
+            <a href="javascript:;">用户名</a><span>|</span>
+            <a href="个人中心.html">个人中心</a><span>|</span>
+            <a href="login.html">退出登陆</a>
+        </span>
+        <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+    </p>
+</header>
+<article class="article">
+    <!-- menu -->
+    <div class="menu">
+        <ul class="mainmenu">
+            <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+            <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+            <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+            <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+            <li><a href="实时热点.html" class="active"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+            <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+            <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+            <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div class="content pt80">
+        <div class="col-box clearfix">
+            <iframe src="chart/实时热点.html" width="100%" height="800" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+</article>
+<footer class="footer">
+    <div class="bg-line">
+        
+        <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+    </div>
+</footer>
+
+<!-- 返回顶部 -->
+<span id="scrollToTop" class="off-screen"></span>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script src="js/main.js"></script>
+<script>
+    $('.content').css({'margin-left':'140px'});
+
+</script>
+</body>
+</html>

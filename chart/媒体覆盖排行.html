@@ -1,0 +1,174 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="main" style="height:355px;width:100%; margin:10px auto;"></div>
+
+<!-- ECharts单文件引入 -->
+<script src="js/echarts-all-3.js"></script>
+<script>
+	// 基于准备好的dom，初始化echarts图表
+	var myChart = echarts.init(document.getElementById('main'));
+
+	option = {
+		backgroundColor:'rgba(22,48,95,1)',
+		toolbox: {
+			show : true,
+			feature : {
+				saveAsImage : {show: true}
+			},
+			right:40,
+			itemSize: 15,
+			iconStyle:{
+				normal:{
+					borderColor:'#fff'
+				}
+			}
+		},
+		tooltip: {
+			trigger: 'axis',
+			textStyle:{color:'rgba(255,255,255,0.6)'},
+			axisPointer: {
+				type: 'line',
+				lineStyle: {
+					width: 1,
+					color:'rgba(255,255,255,0.1)'
+				}
+			}
+		},
+		grid: {
+			left: '0',
+			right: '5%',
+			top: '15',
+			bottom:'3%',
+			containLabel: true
+		},
+		xAxis : [
+			{
+				show:false,
+				type : 'category',
+				position:'top',
+				axisLine:{show:false},
+				splitLine:{show:false},
+				axisLabel:{
+					textStyle:{
+						color:'rgba(255,255,255,0.6)',
+						fontSize:14
+					}
+				},
+				axisTick:{
+					lineStyle:{
+						show:false
+					}
+				},
+				data : ['新华网','新浪微博','海外网','网易新闻','西祠胡同','荆楚网','新篮网','西楚网','百灵网','试听网']
+			}
+		],
+		yAxis : [
+			{
+				type : 'value',
+				axisLine:{show:false},
+				axisLabel:{
+					show:false,
+					textStyle:{
+						color:'rgba(255,255,255,0.6)'
+					}
+				},
+				axisTick:{
+					show:false,
+					lineStyle:{
+						color:'rgba(255,255,255,0.6)'
+					}
+				},
+				splitLine:{
+					lineStyle:{
+						color:'rgba(255,255,255,0.2)',
+						width:1,
+						type:'solid'
+					}
+				}
+			}
+		],
+		series : [
+			{
+				name:'搜索引擎',
+				type:'bar',
+				barWidth : 30,
+				label: {
+					normal: {
+						show: true,
+						position: 'top',
+						textStyle:{
+							color: function (datas) {
+								var colorList = ['#3070c8', '#7993f2', '#d92020', '#ec6e02', '#f6cb58', '#00bef5', '#a6c561', '#288fa1', '#0085f5', '#7b67f4'];
+								return colorList[datas.dataIndex];
+							},
+							fontSize:12
+						},
+						formatter: '{b}\n{c}'
+					}
+				},
+				itemStyle:{
+					normal: {
+						color: function (datas) {
+							var colorList = ['#3070c8', '#7993f2', '#d92020', '#ec6e02', '#f6cb58', '#00bef5', '#a6c561', '#288fa1', '#0085f5', '#7b67f4'];
+							return colorList[datas.dataIndex];
+						}
+					}
+				},
+				data:[
+					{
+						value:132,
+						name:'陕西延安'
+					},
+					{
+						value:116,
+						name:'陕西延安'
+					},
+					{
+						value:57,
+						name:'陕西延安'
+					},
+					{
+						value:32,
+						name:'陕西延安'
+					},
+					{
+						value:22,
+						name:'陕西延安'
+					},
+					{
+						value:15,
+						name:'陕西延安'
+					},
+					{
+						value:57,
+						name:'陕西延安'
+					},
+					{
+						value:32,
+						name:'陕西延安'
+					},
+					{
+						value:22,
+						name:'陕西延安'
+					},
+					{
+						value:15,
+						name:'陕西延安'
+					}
+				]
+			}
+		]
+	};
+
+
+	//使Echarts图表自适应响应窗口变化
+	window.onresize = myChart.resize;
+	// 为echarts对象加载数据
+	myChart.setOption(option);
+</script>
+</body>

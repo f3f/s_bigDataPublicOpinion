@@ -1,0 +1,74 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:0 auto;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>   
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main')); 
+        
+		var option = {
+			title: {
+				text: ''
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			radar: {
+				startAngle:60,
+				splitArea: {show: false},
+				splitLine: { lineStyle: { color:'#525a69' } },
+				axisLine: { lineStyle: { color: '#525a69' } },
+				name: { textStyle: { color: '#ffffff' } },
+				indicator: [
+					{ name: '新闻', max: 5,
+						axisLabel:{
+							show:true,
+							textStyle:{color:'#a2a5aa',fontSize:12},
+							formatter:'{value} K'
+						}
+					},
+					{ name: '公众号', max: 5},
+					{ name: '社区', max: 5},
+					{ name: '微博', max: 5},
+					{ name: '电子报', max: 5},
+					{ name: '微信', max: 5}
+				]
+			},
+			series: [{
+				type: 'radar',
+				data : [
+					{
+						value : [3.7,1.2,3.9,2.4,2.9,1.8],
+						name : '媒体量化分析',
+						symbolSize:0,
+						tooltip: {
+							trigger: 'item'
+						},
+						itemStyle:{
+							normal:{
+								color:'#113d7d'
+							}
+						},
+						areaStyle:{
+							normal:{
+								color:'#113d7d'
+							}
+						}
+					}
+				]
+			}]
+		};
+
+         
+        //使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

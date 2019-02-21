@@ -1,0 +1,117 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;width:100%; margin:10px auto;"></div>
+
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts-all-3.js"></script>   
+    <script>
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+
+		var option = {
+			title: {
+				text: '',
+				right:20,
+				textStyle:{fontSize:14,color:'#ffffff'}
+			},
+			smooth:true,
+			tooltip : {
+				trigger: 'axis',
+				textStyle:{color:'#ffffff'},
+				axisPointer: {
+					type: 'line',
+					lineStyle: {
+						width: 1,
+						color:'rgba(255,255,255,0.1)'
+					}
+				}
+			},
+			legend: {
+				data:['正面','中立','负面'],
+				left:20,
+				icon:'circle',
+				textStyle:{color:'#ffffff'}
+			},
+			grid: {
+				left: '1%',
+				right: '1%',
+				bottom: '4%',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'category',
+					boundaryGap : false,
+					axisLine:{show:false},
+					splitLine:{show:false},
+					axisLabel:{
+						textStyle:{
+							color:'#ffffff'
+						}
+					},
+					axisTick:{
+						lineStyle:{
+							color:'#fff'
+						}
+					},
+					data : ['03-12','03-17','03-22','03-27','04-02','04-07','04-12','04-17','04-22','04-27']
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+					max:3,
+					min:0,
+					splitNumber:3,
+					axisLine:{show:false},
+					axisLabel:{
+						textStyle:{
+							color:'#ffffff'
+						}
+					},
+					splitLine:{
+						lineStyle:{
+							color:'rgba(255,255,255,0.2)',
+							width:1,
+							type:'solid'
+						}
+					},
+				}
+			],
+			series : [
+				{
+					name:'正面',
+					type:'line',
+					data:[0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 1.5,0.5, 1.5],
+					itemStyle:{normal:{color:'#1c7dfa'}},
+					lineStyle:{normal:{width:5}}
+				},
+				{
+					name:'中立',
+					type:'line',
+					data:[1, 2, 1, 2, 1, 2,1, 2, 1, 2],
+					itemStyle:{normal:{color:'#afe5fe'}},
+					lineStyle:{normal:{width:5}}
+				},
+				{
+					name:'负面',
+					type:'line',
+					data:[2.5, 0.5, 2.5, 0.5, 2.5, 0.5, 2.5, 0.5, 2.5, 0.5],
+					itemStyle:{normal:{color:'#ff2a5c'}},
+					lineStyle:{normal:{width:5}}
+				}
+			]
+		};
+
+
+		//使Echarts图表自适应响应窗口变化
+		window.onresize = myChart.resize;     
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>

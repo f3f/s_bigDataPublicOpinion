@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content=" 大数据舆情系统">
+    <meta name="keywords" content=" 大数据舆情系统">
+    <title>首页_ 大数据舆情系统</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header -->
+<header class="header bg-line">
+    <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+    <p class="fr">
+        <span class="fl">
+            <a href="javascript:;">用户名</a><span>|</span>
+            <a href="个人中心.html">个人中心</a><span>|</span>
+            <a href="login.html">退出登陆</a>
+        </span>
+        <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+    </p>
+</header>
+<article>
+    <!-- menu -->
+    <div class="menu">
+        <ul class="mainmenu">
+            <li><a href="index.html" class="active"><i class="icon icon-overview"></i><br/>舆情分析</a></li>
+            <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+            <!-- <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li> -->
+            <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+            <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+            <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+            <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+            <li><a href="主题列表.html"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+        </ul>
+    </div>
+    <!-- content -->
+    <div class="content pt60">
+        <div class="seafixed pl130">
+            <div class="searchbar">
+            <form>
+                <div class="b-div clearfix">
+                    <div class="pr fl zi10 sel-box">
+                        <p class="fl clickSelect"><span class="select w85-tal">主题名称</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                        <ul class="select-box" style="display: none;left: 0;">
+                            <li class="active">主题名称</li>
+                            <li>主题名称</li>
+                            <li>主题名称主题</li>
+                            <li>主题名称</li>
+                            <li>主题名称名</li>
+                            <li>主题名称名称</li>
+                        </ul>
+                    </div>
+                    <div class="fl spanlist">
+                        <i class="icon icon-l" id="keyprev"></i>
+                        <div class="keywords">
+                            <div class="keys" style="position:relative;">
+                                <span class="active">关键词</span>
+                                <span>关键词关键词</span>
+                                <span>关键</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词关键词</span>
+                                <span>关键</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词关键词</span>
+                                <span>关键</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词</span>
+                                <span>关键词关键词</span>
+                                <span>关键</span>
+                            </div>
+                        </div>
+                        <i class="icon icon-r" id="keynext"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="col-box clearfix mt125">
+            <div class="col col-box1">
+                <h2 class="title-h2 ml10">媒体分析</h2>
+            </div>
+            <div class="col col-box1">
+                <h3>
+                    <span>声量走势</span>
+                    <div class="fr ml20">
+                        <a href="#"><i class="icon icon-refresh"></i></a>
+                        <a href="#"><i class="icon icon-save2"></i></a>
+                        <a href="#"><i class="icon icon-look2"></i></a>
+                    </div>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="slzs" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="slzs" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="slzs" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label">
+                            <input type="radio" name="slzs" class="fl rdo" />&nbsp;自定义：
+                            <input type="text" readonly class="dateinput" placeholder="开始:2016/03/08" id="startDate"/>&nbsp;到&nbsp;
+                            <input type="text" readonly class="dateinput" placeholder="结束:2016/04/08" id="endDate"/>
+                        </label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <iframe src="chart/声量走势.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box2">
+                <h3>
+                    <span>媒体类型覆盖</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="mlfg" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlfg" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlfg" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlfg" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <div class="fr margin">
+                        <a href="#"><i class="icon icon-refresh"></i></a>
+                        <a href="#"><i class="icon icon-save2"></i></a>
+                        <a href="#"><i class="icon icon-look2"></i></a>
+                    </div>
+                    <iframe src="chart/charts02.html" width="100%" height="400" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box2">
+                <h3>
+                    <span>媒体来源排行</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="mlph" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlph" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlph" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="mlph" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <div class="margin">
+                        <div class="pr fl zi5 sel-box">
+                            <p class="fl clickSelect chart-sel"><span class="select w85-tal">全部媒体类型</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                            <ul class="select-box" style="display: none;left:0;">
+                                <li class="active">全部媒体类型</li>
+                                <li>主题名称</li>
+                                <li>主题名称主题</li>
+                                <li>主题名称</li>
+                                <li>主题名称名</li>
+                                <li>主题名称名称</li>
+                            </ul>
+                        </div>
+                        <div class="fr">
+                            <a href="#"><i class="icon icon-refresh"></i></a>
+                            <a href="#"><i class="icon icon-save2"></i></a>
+                            <a href="#"><i class="icon icon-look2"></i></a>
+                        </div>
+                    </div>
+                    <iframe src="chart/媒体覆盖排行.html" width="100%" height="375" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box1">
+                <h2 class="title-h2 ml10">情感分析</h2>
+            </div>
+            <div class="col col-box1">
+                <h3>
+                    <span>情感走势</span>
+                    <div class="fr ml20">
+                        <a href="#"><i class="icon icon-refresh"></i></a>
+                        <a href="#"><i class="icon icon-save2"></i></a>
+                        <a href="#"><i class="icon icon-look2"></i></a>
+                    </div>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="qgzs" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgzs" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgzs" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgzs" class="fl" />&nbsp;自定义</label>
+                    </div>
+                    <div class="pr fr zi5 sel-box">
+                        <p class="fl clickSelect chart-sel"><i class="select w85-tal">全部媒体类型</i>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                        <ul class="select-box" style="display: none;left:0;">
+                            <li class="active">全部媒体类型</li>
+                            <li>主题名称</li>
+                            <li>主题名称主题</li>
+                            <li>主题名称</li>
+                            <li>主题名称名</li>
+                            <li>主题名称名称</li>
+                        </ul>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <iframe src="chart/charts03.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box2">
+                <h3>
+                    <span>情感分布</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="qgfb" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgfb" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgfb" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="qgfb" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <div class="margin fr">
+                        <a href="#"><i class="icon icon-refresh"></i></a>
+                        <a href="#"><i class="icon icon-save2"></i></a>
+                        <a href="#"><i class="icon icon-look2"></i></a>
+                    </div>
+                    <iframe src="chart/charts13.html" width="100%" height="375" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box2">
+                <h3>
+                    <span>负面信息来源媒体</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="fm" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="fm" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="fm" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="fm" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <div class="margin">
+                        <div class="pr fl zi5 sel-box">
+                            <p class="fl clickSelect chart-sel"><span class="select w85-tal">全部媒体类型</span>&nbsp;&nbsp;&nbsp;<i class="icon icon-b"></i></p>
+                            <ul class="select-box" style="display: none;left:0;">
+                                <li class="active">全部媒体类型</li>
+                                <li>主题名称</li>
+                                <li>主题名称主题</li>
+                                <li>主题名称</li>
+                                <li>主题名称名</li>
+                                <li>主题名称名称</li>
+                            </ul>
+                        </div>
+                        <div class="fr">
+                            <a href="#"><i class="icon icon-refresh"></i></a>
+                            <a href="#"><i class="icon icon-save2"></i></a>
+                            <a href="#"><i class="icon icon-look2"></i></a>
+                        </div>
+                    </div>
+                    <iframe src="chart/charts05.html" width="100%" height="375" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box1">
+                <h2 class="title-h2 ml10">地域分布</h2>
+            </div>
+            <div class="col col-box1">
+                <h3>
+                    <span>地域分布图</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="fbt" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="fbt" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="fbt" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="fbt" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div">
+                    <iframe src="chart/地域分布图.html" width="60%" height="100%" scrolling="no" frameborder="0" class="fl"></iframe>
+                    <div class="fl" style="width: 40%;">
+                        <div class="detailslist">
+                            <table class="cr-list">
+                                <thead class="fixedHeader">
+                                <tr class="cr-th">
+                                    <th>城市</th>
+                                    <th>信息数</th>
+                                </tr>
+                                </thead>
+                                <tbody class="scrollContent">
+                                <tr>
+                                    <td>北京</td>
+                                    <td>1093</td>
+                                </tr>
+                                <tr>
+                                    <td>广东</td>
+                                    <td>710</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆</td>
+                                    <td>194</td>
+                                </tr>
+                                <tr>
+                                    <td>江苏</td>
+                                    <td>145</td>
+                                </tr>
+                                <tr>
+                                    <td>上海</td>
+                                    <td>127</td>
+                                </tr>
+                                <tr>
+                                    <td>山东</td>
+                                    <td>125</td>
+                                </tr>
+                                <tr>
+                                    <td>北京</td>
+                                    <td>1093</td>
+                                </tr>
+                                <tr>
+                                    <td>广东</td>
+                                    <td>710</td>
+                                </tr>
+                                <tr>
+                                    <td>重庆</td>
+                                    <td>194</td>
+                                </tr>
+                                <tr>
+                                    <td>江苏</td>
+                                    <td>145</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="2">（注：显示排名前十的省份）</td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-box1">
+                <h2 class="title-h2 ml10">相关热词分析</h2>
+            </div>
+            <div class="col col-box1">
+                <h3>
+                    <span>相关词</span>
+                    <div class="fr title-rdo">
+                        <label class="title-rdo-label"><input type="radio" name="rdo" class="fl" checked />&nbsp;24小时</label>
+                        <label class="title-rdo-label"><input type="radio" name="rdo" class="fl" />&nbsp;一周</label>
+                        <label class="title-rdo-label"><input type="radio" name="rdo" class="fl" />&nbsp;一个月</label>
+                        <label class="title-rdo-label"><input type="radio" name="rdo" class="fl" />&nbsp;自定义</label>
+                    </div>
+                </h3>
+                <div class="chart-div" style="height: 500px;">
+                    <iframe src="chart/相关词2.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div class="col col-box1">
+                <h2 class="title-h2 ml10">舆情分析</h2>
+            </div>
+            <div class="col col-box2">
+                <h3><span>最新舆情</span><a href="javascript:;" class="fr more-a">查看更多<i class="icon icon-more-r"></i></a></h3>
+                <div class="chart">
+                    <table class="list">
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-qing">中立</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-green">正面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-green">正面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-green">正面</i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col col-box2">
+                <h3><span>负面舆情</span><a href="javascript:;" class="fr more-a">查看更多<i class="icon icon-more-r"></i></a></h3>
+                <div class="chart">
+                    <table class="list">
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>陕西省政府第五次常务会议召开 分析经济形势 </h4>
+                                <p>来源：微信&nbsp;&nbsp;&nbsp;&nbsp;发布时间：27分钟前</p>
+                            </td>
+                            <td class="itd"><i class="i-red">负面</i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<footer class="footer">
+    <div class="bg-line">
+        
+        <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+    </div>
+</footer>
+
+<!-- 弹出框-消息推送 -->
+<div class="lowerrightCorner" id="messagePushDiv" style="display:none;" >
+    <h2>
+        <i class="icon icon-collect fl"></i>
+        <span class="fl">预警推送</span>
+        <a href="javascript:;"><i class="icon icon-close2 fr"></i></a>
+        <a href="javascript:;"><i class="icon icon-settings fr"></i></a>
+    </h2>
+    <div class="con">
+        <ul>
+            <li>
+                <h4><a href="javascript:;">1. 新锋霸失绝杀，恒大闷平浦项制铁</a></h4>
+                <p class="time">2016-05-19  16:48:16  来源：［北京电视台］</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 返回顶部 -->
+<span id="scrollToTop" class="off-screen"></span>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        /*下拉菜单*/
+        $('.clickSelect').click(function(){
+            $(".select-box").hide();
+            $('.clickSelect').find('i').addClass("icon-b");
+            $('.clickSelect').find('i').removeClass("icon-t");
+            $(this).next().slideToggle("slow");
+            $(this).find('i').removeClass("icon-b");
+            $(this).find('i').addClass("icon-t");
+        });
+        $(".select-box li").click(function(){
+            var textval = $(this).text();
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            $(this).parent().prev().find('.select').text(textval);
+            $(".select-box").hide();
+            $(this).parent().prev().find('i').removeClass("icon-t");
+            $(this).parent().prev().find('i').addClass("icon-b");
+        });
+
+        $(document).bind("click",function(e){
+            var target = $(e.target);
+            if(target.closest(".sel-box").length == 0){
+                $(".select-box").hide();
+                $('.clickSelect').find('i').addClass("icon-b");
+                $('.clickSelect').find('i').removeClass("icon-t");
+            }
+        });
+
+    });
+
+    $('#messagePushDiv').slideToggle('slow');
+    //关闭右下角消息推送弹窗
+    $('.icon-close2').click(function(){
+        $('#messagePushDiv').slideToggle('slow');
+    });
+
+    $(".icon-search").click(function(){
+        dialogMsg('操作成功');
+    });
+
+
+</script>
+</body>
+</html>

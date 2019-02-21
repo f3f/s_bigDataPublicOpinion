@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content=" 大数据舆情系统">
+        <meta name="keywords" content=" 大数据舆情系统">
+        <title> 大数据舆情系统</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            .content{margin-left:270px;}
+        </style>
+    </head>
+    <body>
+    	<!-- header -->
+		<header class="header bg-line">
+            <h1><a href="index.html"><i class="icon icon-logo2"></i> 大数据舆情系统</a></h1>
+            <p class="fr">
+                <span class="fl">
+                    <a href="javascript:;">用户名</a><span>|</span>
+                    <a href="个人中心.html">个人中心</a><span>|</span>
+                    <a href="login.html">退出登陆</a>
+                </span>
+                <span class="fr searchTop"><input type="text" placeholder="请输入搜索关键字" /><i class="fl icon icon-search"></i></span>
+            </p>
+        </header>
+    <article class="article">
+        <!-- menu -->
+        <div class="menu">
+        	<ul class="mainmenu">
+                <li><a href="index.html"><i class="icon icon-overview"></i><br/>舆情概况</a></li>
+                <li><a href="舆情动态.html"><i class="icon icon-dynamic"></i><br/>舆情动态</a></li>
+                <li><a href="舆情分析.html"><i class="icon icon-analysis"></i><br/>舆情分析</a></li>
+                <li><a href="舆情预警-概况.html"><i class="icon icon-predict"></i><br/>舆情预警</a></li>
+                <li><a href="实时热点.html"><i class="icon icon-hots"></i><br/>实时热点</a></li>
+                <li><a href="事件分析.html"><i class="icon icon-event"></i><br/>事件分析</a></li>
+                <li><a href="生成报告.html"><i class="icon icon-report"></i><br/>生成报告</a></li>
+                <li><a href="主题列表.html" class="active"><i class="icon icon-theme"></i><br/>主题管理</a></li>
+            </ul>
+        </div>
+        <ul class="submenu sub-dynamic">
+            <li><a href="主题列表.html">创建主题</a></li>
+            <li><a href="主题列表-预警设置.html" class="active">预警设置</a></li>
+        </ul>
+        <!-- content -->
+        <div class="content pt80">
+            <div class="col-box clearfix">
+                <div class="col col-box1">
+                    <h3><span>预警类别设置</span></h3>
+                    <div class="chart">
+                        <div class="pr fl " style="margin:10px 50px 10px 10px">
+                            <span class="setName">提示框预警：</span>
+                            <span class="pr">
+                                <input type="checkbox" id="checkbox_d1" class="chk" style="left: 5px;top: 2px;" />
+                                <label for="checkbox_d1"></label>
+                            </span>
+                        </div>
+                        <div class="pr fl" style="margin:10px 50px 10px 10px">
+                            <span class="setName">短信预警：</span>
+                            <span class="pr">
+                                <input type="checkbox" id="checkbox_d2" class="chk" style="left: 5px;top: 2px;" />
+                                <label for="checkbox_d2"></label>
+                            </span>
+                        </div>
+                        <div class="pr fl" style="margin:10px 50px 10px 10px">
+                            <span class="setName">邮件预警：</span>
+                            <span class="pr">
+                                <input type="checkbox" id="checkbox_d3" class="chk" style="left: 5px;top: 2px;" />
+                                <label for="checkbox_d3"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-box1">
+                    <h3><span>高级预警设置</span></h3>
+                    <div class="chart">
+                        <div class="pr" style="margin:10px 50px 10px 10px">
+                            <span class="setName">预警关键词：</span>
+                            <input type="text" class="setNameinput">
+                        </div>
+                        <div class="ml10 mt20 clearfix">
+                            <span class="fl setName">媒体类型：</span>
+                            <p class="fl radio3">
+                                <span><input type="radio" name="media" checked/> 全部</span>
+                                <span><input type="radio" name="media"/> 新闻</span>
+                                <span><input type="radio" name="media"/> 微信</span>
+                                <span><input type="radio" name="media"/> 微博</span>
+                                <span><input type="radio" name="media"/> 论坛</span>
+                                <span><input type="radio" name="media"/> 博客</span>
+                            </p>
+                        </div>
+                        <div class="ml10 mt20 clearfix">
+                            <span class="fl setName">情感类型：</span>
+                            <p class="fl radio3">
+                                <span><input type="radio" name="emotional" checked/> 全部</span>
+                                <span><input type="radio" name="emotional"/> 正面</span>
+                                <span><input type="radio" name="emotional"/> 中立</span>
+                                <span><input type="radio" name="emotional"/> 负面</span>
+                            </p>
+                        </div>
+                        <div class="ml10 mt20 clearfix">
+                            <span class="fl setName">预警级别：</span>
+                            <p class="fl radio3">
+                                <span><input type="radio" name="level" checked/> 全部</span>
+                                <span><input type="radio" name="level"/> 红色预警</span>
+                                <span><input type="radio" name="level"/> 橙色预警</span>
+                                <span><input type="radio" name="level"/> 黄色预警</span>
+                            </p>
+                        </div>
+                        <div class="ml10 mt20 clearfix">
+                            <span class="fl lh35 setName">预警时间：</span>
+                            <p class="fl radio3">
+                                <span class="ml20">
+                                    <input type="text" readonly class="dateinput" placeholder="开始:2016/03/08" id="startDate"/>&nbsp; —&nbsp;
+                                    <input type="text" readonly class="dateinput" placeholder="结束:2016/04/08" id="endDate"/>
+                                </span>
+                            </p>
+                        </div>
+                	</div>              
+                </div>
+
+                <div class="colbtn-div">
+                    <button type="button" class="complete-btn f16" id="saveSettings">保存</button>
+                    <a href="javascript:;" class="cancel-a f16 ml20">取消</a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="footer">
+        <div class="bg-line">
+            
+            <span>Copyright &copy; 2010-2015 xxxx All rights reserved.产品官网</span>
+        </div>
+    </footer>
+
+    <!-- 弹出框-保存预警设置 -->
+    <div class="popUp-div" id="confirmDiv" style="display:none;">
+        <div class="confirm-div">
+            <div class="con">
+                <span class="confirmTxt">您确定要保存本次操作吗？ </span>
+                <div class="colbtn-div mt30 tc">
+                    <button type="button" class="complete-btn f16" id="nextStep1">确定</button>
+                    <a href="javascript:;" class="cancel-a f16 ml20 mr20" id="cancel-a">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回顶部 -->
+    <span id="scrollToTop" class="off-screen"></span>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#saveSettings').click(function(){
+            $('#confirmDiv').slideToggle('slow');
+        });
+        $('.cancel-a').click(function(){
+            $('#confirmDiv').slideToggle('slow');
+        });
+    </script>
+    </body>
+</html>
